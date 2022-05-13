@@ -1,4 +1,4 @@
-# FrontEnd Tutorial
+# Front End Tutorial
 
 ## Challenge
 
