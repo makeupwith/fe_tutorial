@@ -52,22 +52,18 @@ package.jsonは最小限のnpmモジュールのバージョンが記載され�
 次に、fetchに失敗した場合の分岐として、三項演算子を持ちて分岐を行った。
   
 ```
-<Stack spacing={1}>
-  {/* profile の値がtruthy な場合に　<Card /> をrender する */}
-  {profile
-    ? <Card sx={{ width: 300 }}>
-      <CardActionArea href={profile.avatar_url}>
-        <CardHeader
-          avatar={<Avatar src={profile.avatar_url} />}
-          title={profile.name}
-          subheader={profile.login}
-        />
-      </CardActionArea>
-    </Card>
-    : "ユーザーの情報が取得できませんでした"
-  }
-  <TextInputArea value={userName} onChange={onChange} onSubmit={onSubmit} />
-</Stack>
+{profile ?
+  <Card sx={{ width: 300 }}>
+    <CardActionArea href={profile.avatar_url}>
+      <CardHeader
+        avatar={<Avatar src={profile.avatar_url} />}
+        title={profile.name}
+        subheader={profile.login}
+      />
+    </CardActionArea>
+  </Card>
+  : (isFlag && <div>ユーザーの情報が取得できませんでした</div>)
+}
 ```
   
 - 一次資料
