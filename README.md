@@ -25,7 +25,7 @@ package.jsonは最小限のnpmモジュールのバージョンが記載され�
 ### Lesson4： Keyboard Eventsの追加
 
 以下のように、MUIのInputコンポーネント内のタグ内にonKeyDownのイベントを追加する。
-その後、
+その後、得たプロパティからEnterキーが押された場合のみ、onSubmitを呼び出す。
 ```
 <Input
   value={props.value}
