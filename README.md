@@ -25,8 +25,15 @@ package.jsonは最小限のnpmモジュールのバージョンが記載され�
 ### Lesson4： Keyboard Eventsの追加
 
 以下のように、MUIのInputコンポーネント内のタグ内にonKeyDownのイベントを追加する。
+その後、
 ```
-<Input value={props.value} onChange={props.onChange} onKeyDown={props.onSubmit} />
+<Input
+  value={props.value}
+  onChange={props.onChange}
+  onKeyDown={e => {
+    (e.key === 'Enter') && props.onSubmit()
+  }}
+/>
 ```
 
 他にもKeyboard EventsとしてonKeyPressとonKeyUpがあるがそれらの違いはのちに調べる。
@@ -35,6 +42,7 @@ package.jsonは最小限のnpmモジュールのバージョンが記載され�
 - 一次資料
 - https://reactjs.org/docs/events.html#keyboard-events
 - 二次資料
+- https://qiita.com/sin9270/items/ebf5afcd2629529fbc42
 - https://qiita.com/sin9270/items/ebf5afcd2629529fbc42
 
 ### Lesson5： リンクの追加とfetchに失敗した場合の処理
