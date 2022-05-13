@@ -2,7 +2,10 @@
 
 ## Challenge
 
-### Lesson2： package.jsonとpackage-lock.json
+### Lesson2： package.jsonとpackage-lock.jsonの役割の違い
+package.jsonは最小限のnpmモジュールのバージョンが記載されているのに対して、package-lock.jsonはpackage.jsonでバージョン指定したモジュールの孫依存モジュールに関して記録することができる。
+
+
 - package.json
 このドキュメントは、package.jsonファイルに必要なものについて知っておく必要があるすべてです。JavaScriptオブジェクトリテラルではなく、実際のJSONである必要があります。
 このドキュメントで説明されている動作の多くは、で説明されている構成設定の影響を受けますconfig。(npmドキュメントの原文訳)
